@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import { Rating } from "./Rating";
 import "./styles.css";
 export const Filters = () => {
-  const [rate, setRate] = useState(3);
+  const [rate, setRate] = useState(2);
   return (
     <div className="filters">
       <span className="title">Flters Products</span>
