@@ -9,15 +9,17 @@ export const Header = () => {
         <Navbar.Brand>
             <Link to="/header">Shopping Card</Link>
         </Navbar.Brand>
-        <Navbar.Text clasName="search">
+        <Navbar.Text className="search">
             <FormControl style={{width:500}} placeholder="enter any value"
-                calssName="m-auto"
+                className="m-auto"
             />
         </Navbar.Text>
         <Nav>
-    <Dropdown alignRight>
+    <Dropdown 
+    // alignRight   backgroundColor
+    >
       <Dropdown.Toggle variant="success">
-   <FaShoppingCart color="white" backgroundColor="white" fontSize="23px"/>
+   <FaShoppingCart color="white" bg="white" fontSize="23px"/>
    <Badge >{10}</Badge>
    </Dropdown.Toggle>
 
