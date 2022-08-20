@@ -1,4 +1,4 @@
-# Live :- 
+# Live :- https://shopminiproject.netlify.app/
 
 # Shopping Card Mini Project
 
