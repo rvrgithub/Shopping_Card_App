@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import * as types from "../Context/actionType";
@@ -17,7 +17,7 @@ export const Filters = () => {
   return (
     <div className="filters">
       <span className="title">Flters Products</span>
-      <span>
+      <span  style={{ cursor: "pointer" }} >
         <Form.Check
           inline
           type="radio"
@@ -33,8 +33,8 @@ export const Filters = () => {
           checked={sort === "lowToHight" ? true:false}
         />
       </span>
-      <span>
-        <Form.Check
+      <span   style={{ cursor: "pointer" }}>
+        <Form.Check 
           inline
           type="radio"
           name="group1"

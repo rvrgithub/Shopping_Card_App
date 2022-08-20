@@ -15,13 +15,7 @@ export const Cart = () => {
   useEffect(() => {
     setTotal(cart.reduce((acc, curr) => acc + Number(curr.price), 0));
   }, [cart]);
-  // let rate = Math.floor(Math.random() * 6);
-  // let arr = [];
-  // for (let i = 1; i <= 5; i++) {
-  //   arr.push(i);
-  // }
-  // let array =[1,2,3,4]
-  // console.log("arr", arr);
+
   return (
     <div className="home">
       <div className="productContainer">

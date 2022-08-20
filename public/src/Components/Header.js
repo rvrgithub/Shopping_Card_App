@@ -21,7 +21,7 @@ export const Header = () => {
   } = CartState();
   return (
 
-    <Navbar bg="dark" variant="dark" className="nav sticky-nav" >
+    <Navbar bg="dark" variant="dark" className="nav sticky-nav" fixed="top" >
       <Container >
         <Navbar.Brand>
           <Link to="/">Shopping Card</Link>

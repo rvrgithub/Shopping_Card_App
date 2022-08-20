@@ -14,11 +14,11 @@ const updateDataProducts =()=>{
     sortedProducts = sortedProducts.sort((a,b)=> 
     sort === "lowToHight" ? a.price - b.price : b.price - a.price)
   }
-  if(byStock === 2 || byStock ===5){
+  if(!byStock){
     sortedProducts =sortedProducts.filter((e)=>e.inStock)
   }
-  if(byFastDelivery === 2 || byFastDelivery ===5){
-    sortedProducts =sortedProducts.filter((e)=>e.byFastDelivery)
+  if(byFastDelivery){
+    sortedProducts =sortedProducts.filter((e)=>e.fastDelivery)
   }
 if(byRating){
 sortedProducts =  sortedProducts.filter((e)=>e.rating >= byRating)
@@ -27,7 +27,7 @@ sortedProducts =  sortedProducts.filter((e)=>e.rating >= byRating)
   return sortedProducts
 }
 
-  console.log("state",products)
+  // console.log("state",products)
   return (
     <div className='home'>
       <Filters />

@@ -1,5 +1,6 @@
 .home{
-    display:flex
+    display:flex;
+    /* border: 1px solid red; */
 }
 .productContainer{
     display: flex;
@@ -7,13 +8,9 @@
     padding: 20px;
     flex-wrap: wrap;
     justify-content: space-around;
+    /* border: 1px solid red; */
+margin-top: 72px;
 }
-
-
-
-
-
-
 
 /* Media Queries */
 @media (max-width: 771px) {
