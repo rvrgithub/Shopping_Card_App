@@ -13,6 +13,12 @@ return {
 ...state,
 cart :state.cart.filter((e)=>e.id !== payload.id)
 };
+
+case types.CHANGE_CART_QTY:
+return {
+...state,
+cart :state.cart.filter((e)=>e.id === payload.id ? (e.qty= payload.qty):(e.qty))
+};
     default : return state 
   }
   
