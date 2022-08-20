@@ -5,11 +5,11 @@ import { Rating } from "./Rating";
 import "./styles.css";
 import * as types from "../Context/actionType";
 export const SingleProducts = ({ pro }) => {
+  console.log("por.instock",pro.inStock)
   const {
     state: { cart },
     dispatch,
   } = CartState();
-  let rate = Math.floor(Math.random() * 6);
   return (
     <div className="products">
       <Card>
@@ -23,7 +23,7 @@ export const SingleProducts = ({ pro }) => {
             ) : (
               <div>4 Days Delevery</div>
             )}
-            <Rating rating={rate}></Rating>
+            <Rating rating={pro.rating}></Rating>
           </Card.Subtitle>
 
           {cart.some((e) => e.id === pro.id) ? (
@@ -46,10 +46,10 @@ export const SingleProducts = ({ pro }) => {
                   payload: pro,
                 });
               }}
-              disabled={rate === 2 || rate === 5}
+              disabled={pro.inStock === 2 || pro.inStock === 5}
             >
               {" "}
-              {rate === 2 || rate === 5 ? "Out To stock" : "Add to cart"}
+              {pro.inStock === 2 || pro.inStock === 5 ? "Out To stock" : "Add to cart"}
             </Button>
           )}
         </Card.Body>

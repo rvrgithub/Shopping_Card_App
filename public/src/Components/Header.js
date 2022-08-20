@@ -21,10 +21,10 @@ export const Header = () => {
   } = CartState();
   return (
 
-    <Navbar bg="dark" variant="dark" className="nav" >
+    <Navbar bg="dark" variant="dark" className="nav sticky-nav" >
       <Container >
         <Navbar.Brand>
-          <Link to="/header">Shopping Card</Link>
+          <Link to="/">Shopping Card</Link>
         </Navbar.Brand>
         <Navbar.Text className="search">
           <FormControl
@@ -33,15 +33,15 @@ export const Header = () => {
             className="m-auto"
           />
         </Navbar.Text>
-        <Nav>
-          <Dropdown
+        <Nav > 
+          <Dropdown alignRight style={{ marginLeft:20}}
           >
-            <Dropdown.Toggle variant="success">
+            <Dropdown.Toggle variant="success"  style={{  marginLeft:210}}>
               <FaShoppingCart color="white" bg="white" fontSize="23px" />
               <Badge>{cart.length}</Badge>
             </Dropdown.Toggle>
 
-            <Dropdown.Menu style={{ minWidth: 370 }}>
+            <Dropdown.Menu style={{ minWidth: 370 , marginRight:400}}>
               {cart.length > 0 ? (
                 <>
                   {cart.map((prod) => (
@@ -74,13 +74,13 @@ export const Header = () => {
                   </Link>
                 </>
               ) : (
-                <span style={{ padding: 10 }}>Cart is Empty </span>
+                <span style={{ padding: 10}}>Cart is Empty </span>
               )}
             </Dropdown.Menu>
           </Dropdown>
         </Nav>
-        <Link to="/login">Login</Link>
-        <Link to="/signup">Signup</Link>
+        {/* <Link to="/login" >Login</Link>
+        <Link to="/signup">Signup</Link> */}
       </Container>
     </Navbar>
   );

@@ -23,3 +23,36 @@ cart :state.cart.filter((e)=>e.id === payload.id ? (e.qty= payload.qty):(e.qty))
   }
   
 }
+
+export const filterReducer=(state, action)=>{
+  const {type,payload} = action
+switch (type){
+case types.SORT_BY_PRICE:
+  return {
+    ...state,
+    sort : payload
+  };
+  case types.FILTER_BY_STOCK:
+    return {
+      ...state,
+      byStock: !state.byStock
+    }
+    case types.FILTER_BY_DELIVERY:
+      return {
+        ...state,
+        byFastDelivery: !state.byFastDelivery,
+      }
+      case types.FILTER_BY_RATING:
+        return {
+          ...state,
+          byRating: payload,
+        }
+        case types.CLEAR_FILTER:
+          return    {
+      byStock: false,
+      byFastDelivery: false,
+      byRating: 0,
+           }
+  default : return state
+}
+}
