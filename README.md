@@ -1,3 +1,33 @@
+# Live :- 
+
+# Shopping Card Mini Project
+
+# Tools :-
+```
+## HTML | CSS | Javascript | fakerjs.dev | React-BootStap | Git .
+
+```
+
+# Features :-
+```
+using faker dev tools to get data
+Apply React Hooks :- useState | useEffect | useContext | useReducer
+Filter functionality, Likes BY Sorting [Ascending, Descending], BY Rating  and.
+More Features Likes :- Add to Card , Delete Card.
+
+```
+
+![image (1)](https://user-images.githubusercontent.com/96066976/185748599-931d33e6-4844-4572-88bd-96d81d023d82.png)
+
+
+![image (2)](https://user-images.githubusercontent.com/96066976/185748623-1dc95e18-e381-4420-aca6-707014080fb3.png)
+
+
+![image (3)](https://user-images.githubusercontent.com/96066976/185748640-d9762e9f-e3a2-4165-bd64-064bfccb1ee6.png)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
